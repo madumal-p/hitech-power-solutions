@@ -1,0 +1,51 @@
+.contactformwrapper {
+  padding: 5%;
+  border-style: solid;
+  border-width: 15px 15px 15px 15px;
+  border-color: var(--color-primary);
+}
+.contactformwrapper input {
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 25px;
+  padding: 0.5rem 1rem;
+}
+.contactformwrapper input:focus {
+  outline: none;
+}
+.contactformwrapper textarea:focus {
+  outline: none;
+}
+.contactformwrapper textarea {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--color-border);
+  min-height: 40px;
+  padding: 5px 14px;
+  margin-bottom: 25px;
+  border-width: 0px 0px 1px 0px;
+}
+.contactformwrapper button {
+  min-height: 40px;
+  background: var(--color-primary);
+  padding: 12px 24px;
+}
+.contactformwrapper button:hover {
+  background: var(--color-black);
+}
+.contactformwrapper form {
+  padding: 1rem 1rem 1rem;
+}
+.errorMessage {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-top: -18px;
+  margin-bottom: 10px;
+  font-family: "Hind";
+}
+.emailSuccess {
+  color: rgb(12, 180, 12);
+  margin-top: 20px;
+}

@@ -1,0 +1,24 @@
+.paginationContainer {
+  width: 8%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+.paginationLinkItem {
+  background-color: var(--color-black);
+  padding: 0.5rem 1rem;
+  color: #fff;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.paginationActiveLinkItem {
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .paginationContainer {
+    margin: 4rem auto;
+  }
+}

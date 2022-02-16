@@ -1,0 +1,21 @@
+.notFound {
+  background-color: var(--color-white);
+  text-align: center;
+}
+.notFound_Title {
+  font-size: 3rem;
+  color: var(--color-black);
+  font-weight: 800;
+}
+.notFoundbtn {
+  background-color: var(--color-primary);
+  padding: 12px 24px;
+  display: inline-block;
+  color: #fff;
+}
+.notFoundbtn:hover {
+  background-color: var(--color-black);
+}
+.notheight {
+  height: 60vh;
+}
