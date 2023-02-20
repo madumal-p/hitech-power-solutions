@@ -11,7 +11,7 @@ import RecomendedProducts from "../components/RecomendedProducts";
 export default function ProductDetail({ product, recomendedProducts }) {
   const { addToCart } = useContext(CartContext);
   const images = [];
-  product.images.edges.forEach((image) => {
+  product?.images?.edges?.forEach((image) => {
     images.push({
       original: image.node.originalSrc,
       thumbnail: image.node.originalSrc,
@@ -73,7 +73,7 @@ export default function ProductDetail({ product, recomendedProducts }) {
               <a className={styles.breadcrumb_Text}>Products</a>
             </Link>{" "}
             <span> {" > "} </span>
-            <span>{product.title}</span>
+            <span>{product?.title}</span>
           </div>
           <div className={styles.wrapper}>
             <div className={styles.productImage_Wrapper}>
@@ -90,10 +90,10 @@ export default function ProductDetail({ product, recomendedProducts }) {
             <div className={styles.content_Wrapper}>
               <h2 className={styles.productTitle}>{product.title}</h2>
               <p className={styles.productshortDescription}>
-                {product.metafield.value}
+                {product?.metafield?.value}
               </p>
               <h3 className={styles.productPrice}>
-                {formatter.format(product.priceRange.minVariantPrice.amount)}
+                {formatter.format(product?.priceRange?.minVariantPrice?.amount)}
               </h3>
               {!product.availableForSale && (
                 <p className="inline-block bg-primary text-white mb-3 text-sm py-1 px-2">
@@ -159,7 +159,7 @@ export default function ProductDetail({ product, recomendedProducts }) {
             <Tab.Panels>
               <Tab.Panel>
                 <p className={styles.productLongDescription}>
-                  {product.description}
+                  {product?.description}
                 </p>
               </Tab.Panel>
               <Tab.Panel>
