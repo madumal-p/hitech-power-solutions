@@ -39,5 +39,6 @@ export async function getStaticProps({ params }) {
   const recomendedProducts = await getRecommendateProducts(product.id);
   return {
     props: { product, recomendedProducts },
+    revalidate: 1,
   };
 }
