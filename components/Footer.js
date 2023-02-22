@@ -25,9 +25,9 @@ function Footer() {
               <div className={`mb-5 ${styles.footerlogo__Wrapper}`}>
                 <Image
                   src="/hitech-power-new-logo-white.png"
-                  alt="footert_logo"
-                  objectFit="cover"
-                  layout="fill"
+                  alt="footer-logo"
+                  width={280}
+                  height={80}
                   className={styles.footerlogo__Image}
                 />
               </div>
@@ -98,7 +98,7 @@ function Footer() {
             <div
               className={`px-3 w-full overflow-hidden  md:my-1 md:px-3 md:w-1/2  lg:my-1 lg:px-3 lg:w-1/2 xl:my-1 xl:px-3 xl:w-1/2 text-center md:text-right font-Hind   ${styles.font14} ${styles.copyrightcolor}`}
             >
-              © 2021 All rights reserved
+              © 2023 hightechpowersolutions All rights reserved
             </div>
           </div>
         </div>
