@@ -15,7 +15,7 @@ export default function ProductDetail({ product, recomendedProducts }) {
     images.push({
       original: image.node.originalSrc,
       thumbnail: image.node.originalSrc,
-      thumbnailClass: "product-gallery-thumbnail-test",
+      loading: "lazy",
     });
   });
   const [defaultProductCount, setDefaultProductCount] = useState(0);
@@ -49,6 +49,7 @@ export default function ProductDetail({ product, recomendedProducts }) {
       allVariantOptions.find((variant) => variant.id === event.target.value)
     );
   }
+
   function handleQuantityChange(event) {
     if (event.target.value === 0) {
       setSelectedVariant((prevState) => ({
@@ -66,11 +67,11 @@ export default function ProductDetail({ product, recomendedProducts }) {
   }
   return (
     <React.Fragment>
-      <div className="appContainer flex flex-col">
+      <div className="container mx-auto flex flex-col">
         <div className={`px-3 ${styles.productDetail_Wrapper}`}>
           <div className={styles.breadcrumb}>
-            <Link href="/products">
-              <a className={styles.breadcrumb_Text}>Products</a>
+            <Link href="/products" className={styles.breadcrumb_Text}>
+              Products
             </Link>{" "}
             <span> {" > "} </span>
             <span>{product?.title}</span>
@@ -82,8 +83,8 @@ export default function ProductDetail({ product, recomendedProducts }) {
                   items={images}
                   autoPlay
                   lazyLoad
-                  showFullscreenButton={false}
-                  showPlayButton={false}
+                  showFullscreenButton={true}
+                  showPlayButton={true}
                 />
               </div>
             </div>
@@ -158,9 +159,10 @@ export default function ProductDetail({ product, recomendedProducts }) {
             </Tab.List>
             <Tab.Panels>
               <Tab.Panel>
-                <p className={styles.productLongDescription}>
-                  {product?.description}
-                </p>
+                <div
+                  className={styles.productLongDescription}
+                  dangerouslySetInnerHTML={{ __html: product?.descriptionHtml }}
+                ></div>
               </Tab.Panel>
               <Tab.Panel>
                 <h3 className="text-xl mb-3">Leave a Reviews</h3>
