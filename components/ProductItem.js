@@ -8,26 +8,29 @@ function ProductItem({ product }) {
   return (
     <div className={styles.productItem_Wrapper}>
       <Link href={`/products/${product.node.handle}`}>
-        <a>
-          <div className={styles.productItem_Image_Wrapper}>
-            <div className={styles.productItem_Image}>
-              <Image
-                src={product.node.images.edges[0].node.originalSrc}
-                alt={product.node.images.edges[0].node.altText}
-                objectFit="cover"
-                layout="fill"
-              />{" "}
-            </div>
+        <div className={styles.productItem_Image_Wrapper}>
+          <div className={styles.productItem_Image}>
+            <Image
+              src={product.node.images.edges[0].node.originalSrc}
+              alt={product.node.title}
+              width={320}
+              height={80}
+            />
           </div>
-        </a>
+        </div>
       </Link>
       <div className={styles.productItem_Content}>
-        <h3 className={`font-DMSans ${styles.productItem_Title}`}>{product.node.title}</h3>
+        <h3 className={`font-DMSans ${styles.productItem_Title}`}>
+          {product.node.title}
+        </h3>
         <h2 className={styles.productItem_Price}>
           {formatter.format(product.node.priceRange.minVariantPrice.amount)}
         </h2>
-        <Link href={`/products/${product.node.handle}`}>
-          <a className={`font-Hind font-bold ${styles.productItem_Button}`}>View Product</a>
+        <Link
+          href={`/products/${product.node.handle}`}
+          className={`font-Hind font-bold ${styles.productItem_Button}`}
+        >
+          View Product
         </Link>
       </div>
     </div>
