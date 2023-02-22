@@ -4,22 +4,81 @@ import AboutSection from "../components/AboutSection";
 import PaginatedItems from "../components/PaginatedItems";
 import Layout from "../components/Layout";
 import { getFeaturedProducts } from "../lib/shopify";
-import styles from "../styles/Home.module.css";
+import FreeShippingBar from "../components/FreeShippingBar";
+import BestDeals from "../components/BestDeals";
+import { textTruncate } from "../utils/helpers";
 
 export default function Home({ featuredProducts }) {
   return (
     <Layout title="Hitech Power Solutions | Home">
       <Sliders />
-      <AboutSection readmorebutton />
-      <div className="productContainer">
-        <h3 className="text-4xl font-bold">Our Latest Products</h3>
-        <h6 className="text-lg mt-1 mb-2 font-semibold">
-          HITECHPOWER SOLUTIONS
-        </h6>
-        <div className="divider mb-10"></div>
+      <div className="bg-grey py-8">
+        <FreeShippingBar />
       </div>
-      <div className="mb-20">
-        <PaginatedItems products={featuredProducts} itemsPerPage={4} />
+      <div className="container mx-auto py-28">
+        <h3 className="text-4xl font-bold mb-8 ">Latest Products</h3>
+        <div className="BestDealsWrapper">
+          <BestDeals
+            index={0}
+            id={1}
+            img={featuredProducts[0]?.node?.images?.edges[0]?.node?.originalSrc}
+            title={featuredProducts[0]?.node?.title}
+            price={640}
+            top
+            description={textTruncate(
+              featuredProducts[0]?.node?.description,
+              90
+            )}
+          />
+          <BestDeals
+            index={1}
+            id={2}
+            img={featuredProducts[1]?.node?.images?.edges[1]?.node?.originalSrc}
+            title={featuredProducts[1]?.node?.title}
+            price={640}
+            description={textTruncate(
+              featuredProducts[1]?.node?.description,
+              90
+            )}
+          />
+          <BestDeals
+            index={2}
+            id={3}
+            img={featuredProducts[2]?.node?.images?.edges[2]?.node?.originalSrc}
+            title={featuredProducts[2]?.node?.title}
+            price={640}
+            description={textTruncate(
+              featuredProducts[2]?.node?.description,
+              90
+            )}
+          />
+          <BestDeals
+            index={3}
+            id={4}
+            img={featuredProducts[3]?.node?.images?.edges[3]?.node?.originalSrc}
+            title={featuredProducts[3]?.node?.title}
+            price={640}
+            description={textTruncate(
+              featuredProducts[3]?.node?.description,
+              90
+            )}
+          />
+          <BestDeals
+            index={4}
+            id={5}
+            img={featuredProducts[1]?.node?.images?.edges[1]?.node?.originalSrc}
+            title={featuredProducts[1]?.node?.title}
+            price={640}
+            description={textTruncate(
+              featuredProducts[1]?.node?.description,
+              100
+            )}
+          />
+        </div>
+      </div>
+      <div className="container mx-auto">
+        <h3 className="text-4xl font-bold mb-8">Best Selling Products</h3>
+        <PaginatedItems products={featuredProducts} itemsPerPage={10} />
       </div>
     </Layout>
   );
