@@ -1,0 +1,25 @@
+.bestDealsWrapper {
+  padding: 25px;
+  overflow: hidden;
+  display: flex;
+  border: 5px solid #ef413b;
+}
+.bestDealsTitle {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.bestDealsPrice {
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.bestDealsPay {
+  font-size: 0.95rem;
+  line-height: 20px;
+}
+.bestDealsImageWrapper {
+  width: 320px;
+  max-width: 320px;
+  position: relative;
+  height: 150px;
+}
