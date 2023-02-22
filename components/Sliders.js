@@ -23,8 +23,9 @@ function Sliders() {
             <Image
               src="/hero-slider1.jpg"
               alt="slider-01"
-              layout="fill"
-              objectFit="cover"
+              fill
+              sizes="100vw"
+              priority
             />
             <div className={styles.sliderContentBox}>
               <h3 className={styles.sliderContentBox_Title}>
@@ -37,8 +38,8 @@ function Sliders() {
                 traffic indicator, solar street lights, solar garden lights and
                 so on.
               </p>
-              <Link href="/">
-                <a className={styles.sliderContentBox_Button}>Learn More</a>
+              <Link href="/" className={styles.sliderContentBox_Button}>
+                Learn More
               </Link>
             </div>
           </div>
@@ -47,12 +48,7 @@ function Sliders() {
       <SwiperSlide>
         <div className={styles.sliderImageWrapper}>
           <div className={styles.sliderImage}>
-            <Image
-              src="/hero-slider2.jpg"
-              alt="slider-02"
-              layout="fill"
-              objectFit="cover"
-            />
+            <Image src="/hero-slider2.jpg" alt="slider-02" fill sizes="100vw" />
             <div className={styles.sliderContentBox}>
               <h3 className={styles.sliderContentBox_Title}>
                 Desk Wireless Charger
@@ -63,8 +59,8 @@ function Sliders() {
                 use and install. This charger can be used as a wireless or wired
                 charger.
               </p>
-              <Link href="/">
-                <a className={styles.sliderContentBox_Button}>Learn More</a>
+              <Link href="/" className={styles.sliderContentBox_Button}>
+                Learn More
               </Link>
             </div>
           </div>
