@@ -4,7 +4,7 @@ import styles from "../styles/ProductList.module.css";
 
 function ProductList({ products }) {
   return (
-    <div className={`productContainer ${styles.productList}`}>
+    <div className={styles.productList}>
       {products.length === 0 ? (
         <div className="text-2xl font-700">No Products Found...</div>
       ) : (
