@@ -1,7 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import GoogleMapReact from "google-map-react";
 import Layout from "../components/Layout";
 import PageBanner from "../components/PageBanner";
 import { FaPhoneSquareAlt, FaEnvelope } from "react-icons/fa";
@@ -36,20 +35,22 @@ function Contact() {
       fetch("/api/contact", {
         method: "POST",
         headers: {
-          "Accept": "application/json, text/plain, */*",
+          Accept: "application/json, text/plain, */*",
           "Content-Type": "application/json",
         },
         body: JSON.stringify(values),
-      }).then((res) => {
-        if (res.status === 200) {
-          setLoading(false);
-          setEmailSuccess(true);
-          resetForm();
-        }
-      }).catch(err => {
-        setLoading(false);
-        setEmailSuccess(false);
       })
+        .then((res) => {
+          if (res.status === 200) {
+            setLoading(false);
+            setEmailSuccess(true);
+            resetForm();
+          }
+        })
+        .catch((err) => {
+          setLoading(false);
+          setEmailSuccess(false);
+        });
     },
   });
   return (
@@ -182,13 +183,6 @@ function Contact() {
             </form>
           </div>
         </div>
-      </div>
-      <div style={{ height: "500px", width: "100%" }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.GOOGLE_MAP_API_KEY }}
-          defaultCenter={{ lat: 59.95, lng: 30.33 }}
-          defaultZoom={11}
-        ></GoogleMapReact>
       </div>
     </Layout>
   );
