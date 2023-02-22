@@ -31,10 +31,6 @@ function Layout({ children, title, description }) {
         <meta property="og:locale" content="en_AU" />
         <meta property="og:site_name" content="Hitech Power Solutions" />
         <link rel="shortcut icon" href="/favicon.ico" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Hind:wght@400;500;700&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <Header />
       {children}
