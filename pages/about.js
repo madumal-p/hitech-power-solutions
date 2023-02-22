@@ -16,7 +16,46 @@ function About() {
   return (
     <Layout title="Hitech Power Solutions | About Us">
       <PageBanner title="About Us" />
-      <AboutSection />
+      <div className={`mx-auto py-16 appContainer ${styles.appContainer}`}>
+        <div className={`flex flex-wrap items-center overflow-hidden`}>
+          <div
+            className={`px-3 w-full overflow-hidden lg:my-1 lg:px-3 lg:w-6/12 xl:my-1 xl:px-3 xl:w-6/12 text-center`}
+          >
+            <div className={`${styles.WhySection__ImageWrapper}`}>
+              <Image
+                src="/why_choose.png"
+                alt="why_choose_image"
+                fill
+                className={styles.AboutSection__Image}
+              />
+            </div>
+          </div>
+          <div
+            className={`px-3 w-full overflow-hidden lg:my-1 lg:px-3 lg:w-6/12 xl:my-1 xl:px-3 xl:w-6/12`}
+          >
+            <h2 className={`text-blackheading font-Hind font-semibold`}>
+              Why Choose Us?
+            </h2>
+            <h3 className={`text-smallheading font-extrabold uppercase`}>
+              Hitech power solutions
+            </h3>
+            <div className="divider mb-7"></div>
+            <p className={`text-bodyfont mb-4`}>
+              We are supplying all types of electrical solutions which required
+              to caravan industry starting from solar regulator & panels, LED
+              down lights, battery chargers, etc. As specialists in RV
+              electrical we will be more than happy to assist you with any
+              enquirers that you have contact us today to order your items.
+            </p>
+            <Link
+              className={`font-semibold font-DMSans text-sizeone mt-4 ${styles.Whychoose__Button}`}
+              href="/contact"
+            >
+              Contact Us Today!
+            </Link>
+          </div>
+        </div>
+      </div>
       <div className={`py-16 ${styles.backgroundwrapper}`}>
         <div
           className={`mx-auto text-white appContainer ${styles.appContainer}`}
@@ -65,72 +104,6 @@ function About() {
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className={`mx-auto py-16 appContainer ${styles.appContainer}`}>
-        <div className={`flex flex-wrap items-center overflow-hidden`}>
-          <div
-            className={`px-3 w-full overflow-hidden lg:my-1 lg:px-3 lg:w-6/12 xl:my-1 xl:px-3 xl:w-6/12 text-center`}
-          >
-            <div className={`${styles.WhySection__ImageWrapper}`}>
-              <Image
-                src="/why_choose.png"
-                alt="why_choose_image"
-                objectFit="cover"
-                layout="fill"
-                className={styles.AboutSection__Image}
-              />
-            </div>
-          </div>
-          <div
-            className={`px-3 w-full overflow-hidden lg:my-1 lg:px-3 lg:w-6/12 xl:my-1 xl:px-3 xl:w-6/12`}
-          >
-            <h2 className={`text-blackheading font-Hind font-semibold`}>
-              Why Choose Us?
-            </h2>
-            <h3 className={`text-smallheading font-extrabold uppercase`}>
-              Hitech power solutions
-            </h3>
-            <div className="divider mb-7"></div>
-            <p className={`text-bodyfont mb-4`}>
-              Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-              gravida lacus vel facilisis.
-            </p>
-            <ul>
-              <li className={`flex flex-wrap items-center`}>
-                <span className={`pr-1 text-primaryred`}>
-                  <FaCheck size={14} />
-                </span>{" "}
-                <span>We Are Highly Experienced</span>
-              </li>
-              <li className={`flex flex-wrap items-center`}>
-                <span className={`pr-1 text-primaryred`}>
-                  <FaCheck size={14} />{" "}
-                </span>
-                <span>Reducing Client Costs</span>
-              </li>
-              <li className={`flex flex-wrap items-center`}>
-                <span className={`pr-1 text-primaryred`}>
-                  <FaCheck size={14} />
-                </span>
-                <span>Providing Technical Expertise</span>
-              </li>
-              <li className={`flex flex-wrap items-center`}>
-                <span className={`pr-1 text-primaryred`}>
-                  <FaCheck size={14} />
-                </span>
-                <span>We Are Always Up To Date</span>{" "}
-              </li>
-            </ul>
-            <Link href="/contact">
-              <a
-                className={`font-semibold font-DMSans text-sizeone mt-4 ${styles.Whychoose__Button}`}
-              >
-                Contact Us Today!
-              </a>
-            </Link>
           </div>
         </div>
       </div>
