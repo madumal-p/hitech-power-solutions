@@ -8,8 +8,8 @@ function Products({ products }) {
   return (
     <Layout title="Hitech Power Solutions | Products">
       <PageBanner title="Shop" />
-      <div className="py-20">
-        <PaginatedItems products={products} itemsPerPage={8} />
+      <div className="container mx-auto py-20">
+        <PaginatedItems products={products} itemsPerPage={20} />
       </div>
     </Layout>
   );
@@ -22,7 +22,7 @@ export async function getStaticProps() {
   return {
     props: {
       products,
+      revalidate: 1,
     },
-    revalidate: 1,
   };
 }
