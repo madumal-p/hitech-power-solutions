@@ -12,6 +12,7 @@
   height: 600px;
 }
 .content_Wrapper {
+  width: 40%;
   margin-left: 5rem;
   margin-top: 3rem;
 }
@@ -44,6 +45,18 @@
 }
 .productLongDescription {
   font-size: 0.95rem;
+}
+.productLongDescription ul {
+  padding: 10px 30px;
+  list-style-type: square;
+}
+.productLongDescription p {
+  margin-bottom: 5px;
+}
+.productLongDescription p strong {
+  font-size: 1.1rem;
+  margin: 10px 0px;
+  display: inline-block;
 }
 .productPrice {
   font-size: 2.4rem;
